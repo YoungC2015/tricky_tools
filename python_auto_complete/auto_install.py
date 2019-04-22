@@ -11,7 +11,7 @@ if __name__ == "__main__":
     try:
         import readline
     except ImportError:
-        os.system("sudo pip install readline")
+        print ("You need pip install readline(or pyreadline on windows)")
     
     bashrc = inform() if len(sys.argv) < 2 else sys.argv[1]
     os.system('echo "export PYTHONSTARTUP=\\"`pwd`/python_auto_complete.py\\"" >> %s' % bashrc)
